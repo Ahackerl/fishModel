@@ -4,6 +4,6 @@
 
 ```
 dependencies {
-    implementation 'com.github.Ahackerl:fishModel:Tag'
+    implementation 'com.github.Ahackerl:fishModel:1.0'
 }
 ```
