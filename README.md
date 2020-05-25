@@ -17,7 +17,7 @@ dependencies {
 }
 ```
 
-#注解方式注入id教程
+# 注解方式注入id教程
 ```
 public class MainActivity extends FishBaseActivity {
 
