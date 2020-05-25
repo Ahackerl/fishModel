@@ -1,0 +1,3 @@
+rootProject.name='fishModel'
+include ':app'
+include ':fishaq'
