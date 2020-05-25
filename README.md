@@ -37,3 +37,24 @@ public class MainActivity extends FishBaseActivity {
     }
 }
 ```
+# 快速使用SQLite数据库教程
+```
+    //首次需要创建表 暂不支持数据库更新
+    List<String> tableList=new ArrayList<>();
+    tableList.add("create table bill (id integer primary key autoincrement,"+ //id主键
+            "sum varchar(255)," +
+            "type varchar(255))");
+    FishDbTools fishDbTools=new FishDbTools(this,"test",tableList);
+    fishDbTools.update("insert into bill (sum,type) values (?,?)",new Object[]{"test1","test2"});
+    Cursor cursor=fishDbTools.search("select * from bill",null);
+    fishDbTools.close();
+
+    //非首次直接用数据库名访问
+    FishDbTools dbTools=new FishDbTools(this,"test");
+    Cursor cursor2=dbTools.search("select * from bill",null);
+    cursor2.moveToNext();
+    String sum=cursor2.getString(1);
+    dbTools.close();
+    
+```
+
