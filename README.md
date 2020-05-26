@@ -15,7 +15,7 @@ allprojects {
     }
 }
 ```
-#### 2.add Gradle Dependency(添加Gradle依赖)
+#### 2.Add Gradle Dependency(添加Gradle依赖)
 ```
 dependencies {
     implementation 'com.github.Ahackerl:fishModel:1.1'
