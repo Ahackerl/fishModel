@@ -62,5 +62,5 @@ public class MainActivity extends FishBaseActivity {
     dbTools.close();
     
 ```
-#### More functions are under development, welcome to join, QQ941131649.
+#### More functions are under development, welcome to join, Tencent QQ941131649.
 #### 更多功能正在开发中，欢迎加入，QQ941131649。
