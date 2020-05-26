@@ -1,7 +1,12 @@
 # fishModel
-安卓便捷开发，包含多种快捷组件
+##### Android convenient development, including a variety of shortcut components.
+##### 安卓便捷开发，包含多种组件。
+##### The minimum API version is 21.
+##### 最低API版本为21。
 
-# 添加maven仓库
+## Instructions（使用方法）
+
+#### 1.Add maven repository(添加maven仓库)
 ```
 allprojects {
     repositories {
@@ -10,14 +15,14 @@ allprojects {
     }
 }
 ```
-# 添加gradle依赖
+#### 2.add Gradle Dependency(添加Gradle依赖)
 ```
 dependencies {
     implementation 'com.github.Ahackerl:fishModel:1.1'
 }
 ```
 
-# 注解方式注入id教程
+#### Function 1: Annotate ID injection tutorial.(功能1：注解方式注入id教程)
 ```
 public class MainActivity extends FishBaseActivity {
 
@@ -37,7 +42,7 @@ public class MainActivity extends FishBaseActivity {
     }
 }
 ```
-# 快速使用SQLite数据库教程
+#### Function 2: Quickly use the SQLite database tutorial.(功能2：快速使用SQLite数据库教程)
 ```
     //首次需要创建表 暂不支持数据库更新
     List<String> tableList=new ArrayList<>();
@@ -57,4 +62,5 @@ public class MainActivity extends FishBaseActivity {
     dbTools.close();
     
 ```
-
+#### More functions are under development, welcome to join, QQ941131649.
+#### 更多功能正在开发中，欢迎加入，QQ941131649。
