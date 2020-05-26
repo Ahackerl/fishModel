@@ -62,5 +62,41 @@ String sum=cursor2.getString(1);
 dbTools.close();
     
 ```
+#### Function 3: Fast asynchronous main thread http tutorial.(功能2：快速异步主线程http教程)
+```
+new FishHttp() {//get
+    @Override
+    public void OnCallBack(String result) {
+        //Get the result here.Has returned to the ui main thread.
+        //在这里处理结果,已经回到ui主线程
+    }
+}.okGet("http://www.baidu.com");
+
+
+
+Bundle bundle=new Bundle();
+bundle.putString("test","test");
+//Currently the post bundle only supports strings.(目前post bundle仅支持字符串)
+
+new FishHttp() {//post
+    @Override
+    public void OnCallBack(String result) {
+        //Get the result here.Has returned to the ui main thread.
+        //在这里处理结果,已经回到ui主线程
+    }
+}.okPost("http://www.baidu.com",bundle);
+
+
+
+new FishHttp() {//upload file
+    @Override
+    public void OnCallBack(String result) {
+        //Get the result here.Has returned to the ui main thread.
+        //在这里处理结果,已经回到ui主线程
+    }
+}.uploadFile("http://path","/sdcard/file","test");
+
+```
+
 #### More functions are under development, welcome to join, Tencent QQ941131649.
 #### 更多功能正在开发中，欢迎加入，QQ941131649。
