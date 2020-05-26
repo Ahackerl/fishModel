@@ -77,7 +77,6 @@ new FishHttp() {//get
 Bundle bundle=new Bundle();
 bundle.putString("test","test");
 //Currently the post bundle only supports strings.(目前post bundle仅支持字符串)
-
 new FishHttp() {//post
     @Override
     public void OnCallBack(String result) {
