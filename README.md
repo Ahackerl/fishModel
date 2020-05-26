@@ -62,7 +62,7 @@ String sum=cursor2.getString(1);
 dbTools.close();
     
 ```
-#### Function 3: Fast asynchronous main thread http tutorial.(功能2：快速异步主线程http教程)
+#### Function 3: Fast asynchronous main thread http tutorial.(功能3：快速异步主线程http教程)
 ```
 new FishHttp() {//get
     @Override
