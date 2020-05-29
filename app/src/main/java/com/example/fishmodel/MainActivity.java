@@ -69,7 +69,7 @@ public class MainActivity extends FishBaseActivity {
             @Override
             public void OnCallBack(String result) {
                 //Get the result here
-                //在这里处理结果
+                //在这里处理结果//
             }
         }.uploadFile("http://path","/sdcard/file","test");
     }
