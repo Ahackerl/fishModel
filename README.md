@@ -96,6 +96,3 @@ new FishHttp() {//upload file
 }.uploadFile("http://path","/sdcard/file","test");
 
 ```
-
-#### More functions are under development, welcome to join, Tencent QQ941131649.
-#### 更多功能正在开发中，欢迎加入，QQ941131649。
