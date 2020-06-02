@@ -63,6 +63,8 @@ dbTools.close();
     
 ```
 #### Function 3: Fast asynchronous main thread http tutorial.(功能3：快速异步主线程http教程)
+* 添加gradle依赖okhttp：implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+* 添加gradle依赖androidx：implementation 'androidx.appcompat:appcompat:1.1.0'
 ```
 new FishHttp() {//get
     @Override
