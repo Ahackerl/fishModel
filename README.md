@@ -23,6 +23,7 @@ dependencies {
 ```
 
 #### Function 1: Annotate ID injection tutorial.(功能1：注解方式注入id教程)
+* 无标题栏
 ```
 public class MainActivity extends FishBaseActivity {
 
@@ -33,6 +34,27 @@ public class MainActivity extends FishBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        test.setText("test");
+    }
+
+    @Override
+    public int initLayoutId() {
+        return R.layout.activity_main;
+    }
+}
+```
+* 有标题栏
+```
+public class MainActivity extends FishBaseAppCompatActivity {
+
+    @ViewInject(R.id.test)
+    TextView test;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        //注入id示例
         test.setText("test");
     }
 
