@@ -120,3 +120,29 @@ new FishHttp() {//upload file
 }.uploadFile("http://path","/sdcard/file","test");
 
 ```
+#### Function 4: Quickly implement the login page.(功能4：快速实现登录页面)
+* 可以通过访问父类成员重新设置头像,设置按钮,编辑框和复选框
+* 可以通过重新方法initLayoutId()来更换布局
+* 账户account的id为account
+* 密码password的id为password
+* 头像head的id为head
+* 记住密码checkbox的id为remember
+```
+public class MainActivity extends FishLoginActivity {
+    
+    @Override
+    protected void loginToDo(String account, String password) {
+        //在这里实现登录
+    }
+
+    @Override
+    protected void registerToDo() {
+        //在这里实现注册跳转
+    }
+
+    @Override
+    protected void retrieveToDo() {
+        //在这里实现找回跳转
+    }
+}
+```
