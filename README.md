@@ -122,7 +122,7 @@ new FishHttp() {//upload file
 ```
 #### Function 4: Quickly implement the login page.(功能4：快速实现登录页面)
 * 可以通过访问父类成员重新设置头像,设置按钮,编辑框和复选框
-* 可以通过重新方法initLayoutId()来更换布局
+* 可以通过重写方法initLayoutId()来更换布局
 * 账户account的id为account
 * 密码password的id为password
 * 头像head的id为head
