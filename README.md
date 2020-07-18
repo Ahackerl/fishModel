@@ -110,6 +110,16 @@ new FishHttp() {//post
 }.okPost("http://www.baidu.com",bundle);
 
 
+JSONObject jsonObject=new JSONObject();
+jsonObject.putString("test","test");
+new FishHttp() {//post
+    @Override
+    public void OnCallBack(String result) {
+        //Get the result here.Has returned to the ui main thread.
+        //在这里处理结果,已经回到ui主线程
+    }
+}.okPostBody("http://www.baidu.com",jsonObject);
+
 
 new FishHttp() {//upload file
     @Override
