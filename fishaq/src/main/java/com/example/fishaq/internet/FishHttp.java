@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Set;
@@ -43,6 +45,47 @@ public abstract class FishHttp {
     }
 
     public abstract void OnCallBack(String result);
+
+
+
+
+    //post请求
+    public void okPostBody(final String url, final JSONObject jsonObject) {
+
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+
+                OkHttpClient client=new OkHttpClient();
+                MediaType mediaType = MediaType.parse("application/json");
+                RequestBody requestBody = RequestBody.create(mediaType,jsonObject.toString());
+                Request request = new Request.Builder()
+                        .url(url)
+                        .post(requestBody)
+                        .build();
+                Response response = null;
+                try {
+                    response = client.newCall(request).execute();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    response = client.newCall(request).execute();
+                    String res=response.body().string();
+
+                    Message message=new Message();
+                    message.what=TYPE_POST;
+                    message.obj=res;
+                    handler.sendMessage(message);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
+    }
 
     //post请求
     public void okPost(final String url, final Bundle bundle) {
