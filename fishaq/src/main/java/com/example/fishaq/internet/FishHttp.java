@@ -65,11 +65,7 @@ public abstract class FishHttp {
                         .post(requestBody)
                         .build();
                 Response response = null;
-                try {
-                    response = client.newCall(request).execute();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+
                 try {
                     response = client.newCall(request).execute();
                     String res=response.body().string();
