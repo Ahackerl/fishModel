@@ -20,7 +20,7 @@ allprojects {
 #### 2.Add Gradle dependency(添加Gradle依赖)
 ```
 dependencies {
-    implementation 'com.github.Ahackerl:fishModel:1.4'
+    implementation 'com.github.Ahackerl:fishModel:1.5'
 }
 ```
 
