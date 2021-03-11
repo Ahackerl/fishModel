@@ -21,6 +21,10 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+/**
+ * @author fish
+ * 功能：http请求相关
+ */
 public abstract class FishHttp {
 
     private Handler handler;

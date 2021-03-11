@@ -6,6 +6,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.List;
 
+/**
+ * @author fish
+ * 功能：SQLite相关
+ */
 public class FishDbHelper extends SQLiteOpenHelper {
 
 

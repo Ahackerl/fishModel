@@ -7,11 +7,16 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import androidx.core.content.ContextCompat;
+
 import com.example.fishaq.R;
 import com.example.fishaq.activity.FishBaseAppCompatActivity;
 
 
-
+/**
+ * @author fish
+ * 功能：登录activity
+ */
 public abstract class FishLoginActivity extends FishBaseAppCompatActivity {
 
     public EditText account;
@@ -27,6 +32,8 @@ public abstract class FishLoginActivity extends FishBaseAppCompatActivity {
         password=findViewById(R.id.password);
         head=findViewById(R.id.head);
         remember=findViewById(R.id.remember);
+
+        head.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),setIcon()));
         sharedPreferences=getSharedPreferences("login",MODE_PRIVATE);
 
         remember.setChecked(sharedPreferences.getBoolean("remember",false));
@@ -67,4 +74,5 @@ public abstract class FishLoginActivity extends FishBaseAppCompatActivity {
     protected abstract void loginToDo(String account, String password);
     protected abstract void registerToDo();
     protected abstract void retrieveToDo();
+    protected abstract int setIcon();
 }

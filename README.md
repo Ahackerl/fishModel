@@ -3,6 +3,8 @@
 ##### 安卓便捷开发，包含多种组件。
 ##### The minimum API version is 21.
 ##### 最低API版本为21。
+##### Part of the code referenced from the network.
+##### 部分代码参考自网络。
 
 ## Instructions（使用方法）
 
@@ -154,5 +156,40 @@ public class MainActivity extends FishLoginActivity {
     protected void retrieveToDo() {
         //在这里实现找回跳转
     }
+
+    @Override
+    protected int setIcon() {
+        //在这里设置icon 这里1.4版本之前为资源文件中获取 目前修改为代码中设置图片
+        return R.drawable.ic_launcher_background;
+    }
 }
+```
+#### Function 5: Entity class to HashMap.(功能5：实体类转HashMap)
+* 可以通过调用方法将实体类转为HashMap
+* 生成map的key为实体类中属性的名称 通过get方法获取
+* 必须生成get方法
+```
+public class TestEntity {
+
+    int id;
+    String test;
+
+    public TestEntity(int id, String test) {
+        this.id = id;
+        this.test = test;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTest() {
+        return test;
+    }
+
+}
+
+TestEntity testEntity=new TestEntity(1,"123");
+Map map=EntityUtils.convert2Map(testEntity);
+
 ```
