@@ -1,9 +1,17 @@
 package com.example.fishmodel;
 
+import android.Manifest;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import com.example.fishaq.activity.login.FishLoginActivity;
 import com.example.fishaq.util.EntityUtils;
+import com.permissionx.guolindev.PermissionX;
+import com.permissionx.guolindev.PermissonXOnJava;
+
 import org.json.JSONObject;
+
+import java.util.List;
 
 
 public class MainActivity extends FishLoginActivity {
@@ -12,22 +20,12 @@ public class MainActivity extends FishLoginActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        new PermissonXOnJava() {
+            @Override
+            public void callBack(boolean allGranted, List<String> deniedList) {
 
-
-        JSONObject jsonObject=new JSONObject();
-        try {
-            jsonObject.put("id",2);
-            jsonObject.put("test","qwe");
-
-            TestEntity testEntity1 = (TestEntity) EntityUtils.jsonObject2Obj(jsonObject, TestEntity.class);
-
-            TestEntity testEntity=new TestEntity(1,"123");
-            JSONObject jsonObject1 = EntityUtils.convert2JsonObject(testEntity);
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            }
+        }.request(this,Manifest.permission.CALL_PHONE);
 
 
     }
