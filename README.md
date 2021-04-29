@@ -20,7 +20,8 @@ allprojects {
 #### 2.Add Gradle dependency(添加Gradle依赖)
 ```
 dependencies {
-    implementation 'com.github.Ahackerl:fishModel:1.5'
+    implementation 'com.github.Ahackerl.fishModel:fishaq:1.6'
+    implementation 'com.github.Ahackerl.fishModel:permission:1.6'
 }
 ```
 
@@ -248,5 +249,28 @@ jsonObject.put("id",2);
 jsonObject.put("test","qwe");
 
 TestEntity testEntity = (TestEntity) EntityUtils.jsonObject2Obj(jsonObject, TestEntity.class);
+
+```
+#### Function 8: Encapsulation of dynamic permission application.(功能8：动态权限申请封装)
+* 郭霖博主第一行代码最后动态权限申请的封装
+* 添加java方式
+```
+//java方式
+new PermissonXOnJava() {
+    @Override
+    public void callBack(boolean allGranted, List<String> deniedList) {
+                
+    }
+}.request(this,Manifest.permission.CALL_PHONE);
+
+//kotlin方式
+PermissionX.request(this, Manifest.permission.CALL_PHONE) { allGranted, deniedList ->
+    if (allGranted) {
+        call()
+    } else {
+        Toast.makeText(this, "You denied $deniedList", Toast.LENGTH_SHORT).show()
+    }
+}
+//其中request为变长参数，可传入多个权限。
 
 ```
