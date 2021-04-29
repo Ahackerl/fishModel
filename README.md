@@ -193,3 +193,60 @@ TestEntity testEntity=new TestEntity(1,"123");
 Map map=EntityUtils.convert2Map(testEntity);
 
 ```
+#### Function 6: Entity class to JSONObject.(功能6：实体类转JSONObject)
+* 可以通过调用方法将实体类转为JSONObject
+```
+public class TestEntity {
+
+    int id;
+    String test;
+
+    public TestEntity(int id, String test) {
+        this.id = id;
+        this.test = test;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTest() {
+        return test;
+    }
+
+}
+
+TestEntity testEntity=new TestEntity(1,"123");
+JSONObject jsonObject = EntityUtils.convert2JsonObject(testEntity);
+
+```
+#### Function 7: JSONObject class to Entity.(功能7：JSONObject转实体类)
+* 可以通过调用方法将JSONObject转为实体类
+* 实体类必须生成无参构造方法
+```
+public class TestEntity {
+
+    int id;
+    String test;
+
+    public TestEntity(int id, String test) {
+        this.id = id;
+        this.test = test;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTest() {
+        return test;
+    }
+
+}
+JSONObject jsonObject=new JSONObject();
+jsonObject.put("id",2);
+jsonObject.put("test","qwe");
+
+TestEntity testEntity = (TestEntity) EntityUtils.jsonObject2Obj(jsonObject, TestEntity.class);
+
+```

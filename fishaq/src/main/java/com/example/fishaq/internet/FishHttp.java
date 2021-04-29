@@ -12,7 +12,6 @@ import java.util.Set;
 import java.util.UUID;
 
 
-import androidx.annotation.NonNull;
 import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -37,7 +36,7 @@ public abstract class FishHttp {
     public FishHttp() {
         handler=new Handler(){
             @Override
-            public void handleMessage(@NonNull Message msg) {
+            public void handleMessage(Message msg) {
                 super.handleMessage(msg);
 
                 if(msg.what==TYPE_POST||msg.what==TYPE_GET||msg.what==TYPE_UPDATE_FILE){
