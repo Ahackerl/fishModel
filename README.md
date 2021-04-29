@@ -224,11 +224,18 @@ JSONObject jsonObject = EntityUtils.convert2JsonObject(testEntity);
 #### Function 7: JSONObject class to Entity.(功能7：JSONObject转实体类)
 * 可以通过调用方法将JSONObject转为实体类
 * 实体类必须生成无参构造方法
+* 添加gradle依赖 implementation('com.fasterxml.jackson.core:jackson-core:2.11.1')
+* 添加gradle依赖 implementation('com.fasterxml.jackson.core:jackson-annotations:2.11.1')
+* 添加gradle依赖 implementation('com.fasterxml.jackson.core:jackson-databind:2.11.1')
 ```
 public class TestEntity {
 
     int id;
     String test;
+
+    public TestEntity() {
+
+    }
 
     public TestEntity(int id, String test) {
         this.id = id;
@@ -259,7 +266,7 @@ TestEntity testEntity = (TestEntity) EntityUtils.jsonObject2Obj(jsonObject, Test
 new PermissonXOnJava() {
     @Override
     public void callBack(boolean allGranted, List<String> deniedList) {
-                
+
     }
 }.request(this,Manifest.permission.CALL_PHONE);
 
