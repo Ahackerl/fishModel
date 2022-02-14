@@ -20,8 +20,8 @@ allprojects {
 #### 2.Add Gradle dependency(添加Gradle依赖)
 ```
 dependencies {
-    implementation 'com.github.Ahackerl.fishModel:fishaq:1.6'
-    implementation 'com.github.Ahackerl.fishModel:permission:1.6'
+    implementation 'com.github.Ahackerl.fishModel:fishaq:1.7'
+    implementation 'com.github.Ahackerl.fishModel:permission:1.7'
 }
 ```
 
@@ -279,5 +279,10 @@ PermissionX.request(this, Manifest.permission.CALL_PHONE) { allGranted, deniedLi
     }
 }
 //其中request为变长参数，可传入多个权限。
+
+```
+#### Function 9: Uri trans to real path.(功能9：Uri转真实路径)
+```
+String filePath = Uri2PathUtil.getRealPathFromUri(MainActivity.this, originalUri);
 
 ```
