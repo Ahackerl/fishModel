@@ -111,6 +111,7 @@ public abstract class FishHttp {
                         .build();
                 Response response = null;
                 try {
+			  //默认不支持 http 需要去 manifest.xml里
                     response = client.newCall(request).execute();
                     String res=response.body().string();
 
