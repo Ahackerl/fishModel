@@ -286,3 +286,5 @@ PermissionX.request(this, Manifest.permission.CALL_PHONE) { allGranted, deniedLi
 String filePath = Uri2PathUtil.getRealPathFromUri(MainActivity.this, originalUri);
 
 ```
+
+# QQ群：434282886 欢迎！！！
